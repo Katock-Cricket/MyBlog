@@ -22,7 +22,7 @@ ShowReadingTime: true
 ShowBreadCrumbs: true
 ShowPostNavLinks: true
 cover:
-    image: "https://i0.hdslb.com/bfs/article/efe06781a502bdd1a87d2337633ac44db2f8f00a.jpg@942w_579h_progressive.webp" # image path/url
+    image: "https://i0.hdslb.com/bfs/article/efe06781a502bdd1a87d2337633ac44db2f8f00a.jpg/url" # image path/url
     alt: "<alt text>" # alt text
     caption: "<text>" # display caption under cover
     relative: false # when using page bundles set this to true
