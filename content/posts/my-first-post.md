@@ -22,16 +22,17 @@ ShowReadingTime: true
 ShowBreadCrumbs: true
 ShowPostNavLinks: true
 cover:
-    image: "https://i0.hdslb.com/bfs/article/efe06781a502bdd1a87d2337633ac44db2f8f00a.jpg/url" # image path/url
-    alt: "<alt text>" # alt text
-    caption: "<text>" # display caption under cover
-    relative: false # when using page bundles set this to true
-    hidden: true # only hide on current single page
+    image: "https://img2.huashi6.com/images/resource/thumbnail/2021/10/28/18222_3429341215.jpg?imageMogr2/quality/75/interlace/1/thumbnail/1400x/gravity/North/crop/1400x2100/format/webp"
+    # can also paste direct link from external site
+    # ex. https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png
+    alt: "<alt text>"
+    caption: "<text>"
+    relative: false # To use relative path for cover image, used in hugo Page-bundles
 editPost:
     URL: "https://github.com/Katock-Cricket/MyBlog/content"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 ---
 
-蝈蝈影视公司董事长——蝈总
+蝈蝈影视公司董事长——蝈总的老婆
 
