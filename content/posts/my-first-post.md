@@ -1,5 +1,5 @@
 ---
-title: "My 1st post"
+title: "老婆测试"
 date: 2022-05-09
 # weight: 1
 # aliases: ["/first"]
@@ -34,5 +34,5 @@ editPost:
     appendFilePath: true # to append file path to Edit link
 ---
 
-蝈蝈影视公司董事长——蝈总的老婆
+蝈总的老婆
 

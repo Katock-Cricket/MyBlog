@@ -5,10 +5,10 @@ theme: "PaperMod"
 ShowToc: true
 TocOpen: true
 params:
-    ShowShareButtons: true
-    ShowReadingTime: true
-    ShowBreadCrumbs: true
-    comments: true
+    # ShowShareButtons: true
+    # ShowReadingTime: true
+    # ShowBreadCrumbs: true
+    # comments: true
     homeInfoParams:
         Title: 这里是蝈蝈影视公司的博客
         Content: 什么都没有别看了
