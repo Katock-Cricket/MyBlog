@@ -18,9 +18,11 @@
 安全序列：序列中每个进程需要的附加资源 &lt;= 当前可用资源 + 它前面所有进程占有的资源
 银行家算法：先看request（当前进程请求资源量）是否小于need（当前进程可能需要的最大资源量-当前占有量），小于的话再看request是否小于available（当前还有多少可用），如果都行的话假设分配一下用安全性算法检测，若安全则分配否则不分配
 安全性算法：找need&lt;work的进程，有的话，这个进程对应的finish数组置true，work+=allocate，初始时work=available，如果最后所有进程全为true则安全
-RAG资源分配图算法……</p></div><footer class=entry-footer><span title="2022-05-15 22:58:42 +0800 +0800">May 15, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to OS笔记4：进程与并发程序设计" href=https://Katock-Cricket.github.io/MyBlog/posts/os4/></a></div></article><article class=post-entry><div class=post-info><header class=entry-header><h2>OS笔记3：内存管理</h2></header><div class=entry-content><p>三、存储管理 分区存储 固定分区 当系统初始化时，把存储空间划分成若干个任意大小的区域；然后，把这些区域分配给每个用户作业
+RAG资源分配图算法……</p></div><footer class=entry-footer><span title="2022-05-15 22:58:42 +0800 +0800">May 15, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to OS笔记4：进程与并发程序设计" href=https://Katock-Cricket.github.io/MyBlog/posts/os4/></a></div></article><article class=post-entry><div class=post-info><header class=entry-header><h2>OS笔记3：内存管理</h2></header><div class=entry-content><p>三、存储管理 覆盖与交换 覆盖：程序员做的，将一个大作业分割成若干小部分，当前一个部分运行结束后，其占用的内存被后面的部分直接覆盖
+交换：程序员不用做，解决运行多道程序所出现的内存不足问题，交换出暂时不需要的作业。
+分区存储 固定分区 当系统初始化时，把存储空间划分成若干个任意大小的区域；然后，把这些区域分配给每个用户作业
 优点 ：易于实现，开销小。 缺点：内碎片造成浪费，分区总数固定，限制了并发执行的程序数目。 分配方式：单一队列与多队列 可变式分区 分区的边界可以移动，即分区的大小可变。没有内碎片，但是有外碎片。
-碎片：内存中无法被利用的存储空间。
+内碎片：分区中无法被利用的存储空间。
 外碎片：分区与分区之间的碎片，可以用紧凑技术消除外碎片。
 空闲空间管理：位图和空闲链表 位图表示法：给每个分配单元赋予一个字位，字位取值为0表示单元闲置，取值为1则表示已被占用。 链表表示法：由“标志位(空闲或程序)+起始地址+空间长度+链表指针”构成。 分配算法 首次适应算法：从这个空白区域链的始端开始查找，选择第一个足以满足请求的空白块。
 低地址部分留下了很多很小空闲空间，增加了查找开销。
@@ -40,9 +42,7 @@ RAG资源分配图算法……</p></div><footer class=entry-footer><span title="
 缺页异常处理流程 陷入内核态，保存寄存器信息保存现场 找到发生缺页的虚拟页面 检查虚拟地址的有效性和保护位 找一个空闲的页框(物理内存中的页面)，如果没有的话使用页面置换算法换出一个页框 如果换出去的页框是dirty的，需要写回磁盘 准备好页框后将所需页面从磁盘调入 向操作系统发出中断更新页表 恢复现场继续执行 页面置换策略 Belady现象：分配的页面数增多但缺页率反而提高的异常现象
 OPT：最优置换，无法被实现，但可以用于衡量其他页面置换算法的效果。
 FIFO：先入先出，当必需置换掉某页时，选择最旧的页换出。
-Second Chance ：每个页面都有一个标志位。用于标识此数据放入缓存队列后是否被再次访问过。删的时候如果没被访问过直接删，如果访问过的话清除标志然后跳过删下一个，这个下次再删。FIFO的改进版。
-clock：环形队列，没被访问过直接替换，被访问过的话清除标志，指向下一个。Second Chance改进版。
-LRU：每访问到一个已有的页，把它移到队尾，置换时选择队首页。...</p></div><footer class=entry-footer><span title="2022-05-15 22:58:37 +0800 +0800">May 15, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to OS笔记3：内存管理" href=https://Katock-Cricket.github.io/MyBlog/posts/os3/></a></div></article><article class=post-entry><div class=post-info><header class=entry-header><h2>OS笔记2：系统引导</h2></header><div class=entry-content><p>二、系统引导 MIPS启动流程 两个阶段：Stage1（汇编代码），Stage2（C代码）
+Second Chance ：每个页面都有一个标志位。用于标识此数据放入缓存队列后是否被再次访问过。删的时候如果没被访问过直接删，如果访问过的话清除标志然后跳过删下一个，这个下次再删。FIFO的改进版。...</p></div><footer class=entry-footer><span title="2022-05-15 22:58:37 +0800 +0800">May 15, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to OS笔记3：内存管理" href=https://Katock-Cricket.github.io/MyBlog/posts/os3/></a></div></article><article class=post-entry><div class=post-info><header class=entry-header><h2>OS笔记2：系统引导</h2></header><div class=entry-content><p>二、系统引导 MIPS启动流程 两个阶段：Stage1（汇编代码），Stage2（C代码）
 四个虚拟空间：kseg0（最高位置0得物理地址，cache存取），kseg1（高三位置0，不用cache，重启时可正常工作），kseg2（内核态，MMU转换），kuseg（用户态，MMU转换）
 Stage1 Stage2 MIPS下Linux启动流程 Bootloader将 Linux 内核映像拷贝到RAM 从head.s文件的kernel_entry()开始，初始化内核堆栈 …… ELF文件 测试题 Bootloader的实现严重依赖于具体硬件，即使是相同的CPU，它的外设(比如Flash)也可能不同，所以不可能有一个Bootloader支持所有的CPU、所有的开发板。但是bootloader是可以支持不同CPU架构和不同操作系统，只不过常常不能直接拿来用，需要做一些移植的工作。
 MIPS平台外设IO空间通常映射到kseg1段，映射到0xA0000000-0xBFFFFFFF的不通过cache的空间中。
