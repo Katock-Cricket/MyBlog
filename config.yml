@@ -1,6 +1,6 @@
 baseURL: https://Katock-Cricket.github.io/MyBlog
 languageCode: en-us
-title: 蝈蝈影视公司官方
+title: 蝈蝈影视公司
 theme: "PaperMod"
 ShowToc: true
 TocOpen: true
@@ -10,8 +10,14 @@ params:
     # ShowBreadCrumbs: true
     # comments: true
     homeInfoParams:
-        Title: 这里是蝈蝈影视公司的博客
-        Content: 什么都没有别看了
+        Title: 蝈蝈影视公司官方博客
+        Content: "视频队列：\n
+                安装教程/常见问题解决\n
+                mod整合包展示\n
+                UG的GTA音乐\n
+                电影重制版\n
+                部分任务速通\n
+                Genshin Theft Auto"
 
     #  SsocialIcons: # optional
     #     - name: "<platform>"
