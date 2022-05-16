@@ -4,6 +4,7 @@ title: 蝈蝈影视公司
 theme: "PaperMod"
 ShowToc: true
 TocOpen: true
+post_asset_folder: true
 params:
     # ShowShareButtons: true
     # ShowReadingTime: true
