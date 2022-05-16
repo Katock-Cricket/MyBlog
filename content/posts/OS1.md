@@ -80,7 +80,7 @@ editPost:
 
 在相同条件下，异常可以重现，例如内存访问错误、调试指令以及被零除。
 
-![1.png](./os1/1.png)
+<img src="./os1/1.png" alt="" referrerpolicy="no-referrer">
 
 ### 系统调用
 
