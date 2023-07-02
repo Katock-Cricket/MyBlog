@@ -1,5 +1,5 @@
 ---
-title: "GtasaAudio"
+title: "史上最详细GTASA音频修改教程"
 date: 2023-07-02T18:26:02+08:00
 draft: false
 author: "蝈总"
