@@ -22,8 +22,6 @@ editPost:
     appendFilePath: true # to append file path to Edit link
 ---
 
-# 史上最详细GTASA音频修改教程
-
 本教程是《史上最详细GTASA修改教程》关于音频部分的展开详述，作者Cyber蝈蝈总（蝈总）。
 
 ![微信图片_20230517180113](1.jpg)
@@ -120,15 +118,15 @@ editPost:
 
 第三步，删掉原音频前99.9%的部分（是为了保证总长度不变）
 
-![image-20230702174614148](C:/Users/78728/AppData/Roaming/Typora/typora-user-images/image-20230702174614148.png)
+![image-20230702174614148](8.jpg)
 
 第四步，将自己的音频截成合适的长度，正好塞进原音频空下的部分
 
-![image-20230702174704285](C:/Users/78728/AppData/Roaming/Typora/typora-user-images/image-20230702174704285.png)
+![image-20230702174704285](9.jpg)
 
 第五步，删去自己的音频的轨道，然后导出为对应的格式(SFX都是wav单音轨，streams都是ogg双音轨)
 
-![image-20230702174801700](C:/Users/78728/AppData/Roaming/Typora/typora-user-images/image-20230702174801700.png)
+![image-20230702174801700](10.jpg)
 
 参考链接：https://gtaforums.com/topic/494176-sa-how-to-replace-anyall-sounds/
 
