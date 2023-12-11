@@ -1,5 +1,5 @@
 ---
-title: "Gtasubtitle"
+title: "VC和SA中文字幕修改教程"
 date: 2023-12-11T18:32:22+08:00
 draft: true
 author: "蝈总"
